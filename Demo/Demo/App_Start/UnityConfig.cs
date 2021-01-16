@@ -1,5 +1,8 @@
 using System;
-
+using Demo.DAL.Repository;
+using Demo.DAL.SeekWork;
+using Demo.Domain.Entity;
+using Demo.Domain.Interface;
 using Unity;
 
 namespace Demo
@@ -41,7 +44,8 @@ namespace Demo
             // container.LoadConfiguration();
 
             // TODO: Register your type's mappings here.
-            // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<IDbContext, EFContext>();
+            container.RegisterType<IGenericRepository<Member>, MemberRepository>();
         }
     }
 }
