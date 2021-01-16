@@ -57,12 +57,17 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="MemberServiceTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\Demo.Domain\Demo.Domain.csproj">
+        <Project>{10dff6c6-baf2-4d4e-9a67-5067732e03a2}</Project>
+        <Name>Demo.Domain</Name>
+      </ProjectReference>
       <ProjectReference Include="..\Demo.Service\Demo.Service.csproj">
         <Project>{7bc216b9-48d7-43d9-946b-07ec32474067}</Project>
         <Name>Demo.Service</Name>
