@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Target"><value>H4sIAAAAAAAAE81Vy27bMBC85ysE3mPaySU1ZAeu7RQB6rionNxpaaUQ5aviyrC+rYd+Un+hK0vyKw8n6aU3iRzOzs4ul39+/Q6v11oFK8i9tGbAep0uC8DENpEmG7AC0/Mrdj08C6eJXgcPLeyygtFB4wfsEdH1OffxI2jhO1rGufU2xU5sNReJ5Rfd7ife63EgCjY8C4Lwe2FQaqi+6W9sTQwOC6FmNgHl62XaiDaUwZ3Q4J2IYcCm2mHJgpGSgiJHoFIWCGMsCiRd/XsPEebWZJGjBaEWpQPCpUJ5aPT2d/C3Su9eVNL57mBLFRcerX4nYe+y8YIfH/+Qo6x1i/yakqtYkp0opIF8Y9yATUDbag3WyILjmJVlY5U3RmFekE98WwBeV6CpE3++UOFMOEfdsqtbsxBEddHG59H7U9M1B4/9KxluA6HNRQZHuxSZZN7I3ONEoFiKqgnGiX4CO3BoL/uGvk3/MM+wCXqyZ5+IqCEs+JbblUwqAVHpEXSnAnSin2qsJBjcAWbCyBQ8LuwPoCYji66O7sD/04/c+0SdbspnKvNi2z0xOuR7AyScgJcZMe+miYG40r/laxG3JrXkqYMcywhwT2SLaHcblTNAkZDAUY4yFTHSdgzeUxOw4EGoYjORlpDcmnmBrsCR96CXqjxI5tXom0t1oDecu+rH/7t6UihJPczN50KqZCv5ph6H/DRDVaUvQOubfqDRSmxZuSW6s+ZtPI1vE3BgEmrtBWiniMvPTSRW8AFlNLa+Qibisr0jL3KcLMCB3+FEiiwX2tcEu8P0BPLqDRz+BUWrKX40BwAA</value></data>
+  <data name="DefaultSchema"><value>dbo</value></data>
+  </root>
