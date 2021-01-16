@@ -11,6 +11,8 @@ namespace Demo
         {
             // Web API 設定和服務
 
+            UnityWebApiActivator.Start();
+            
             // Web API 路由
             config.MapHttpAttributeRoutes();
 
