@@ -20,16 +20,22 @@ namespace Demo.Controllers
         {
             try
             {
+                var members = _service.GetAll();
+                
                 return new APIResult()
                 {
                     IsSuccess = true,
-                    Payload = new MemberViewModel()
+                    Payload = members
                 };
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
+                return new APIResult()
+                {
+                    IsSuccess = false,
+                    Message = "讀取失敗"
+                };
             }
         }
 

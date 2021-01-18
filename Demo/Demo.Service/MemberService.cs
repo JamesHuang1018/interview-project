@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Demo.Domain.Entity;
 using Demo.Domain.Interface;
 
@@ -17,6 +19,13 @@ namespace Demo.Service
             var member = _repo.Get(memberId);
 
             return member;
+        }
+
+        public IEnumerable<Member> GetAll()
+        {
+            var data = _repo.Get();
+
+            return data;
         }
 
         public bool Save(Member member, bool isEdit)

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Demo.Domain.Entity;
@@ -17,6 +18,20 @@ namespace Demo.DAL.Repository
         { 
             _context = dbContext.DbContext; 
             _db = _context.Set<ORMMember>();
+        }
+
+        public IEnumerable<Member> Get()
+        {
+            var data = _db.AsNoTracking().Select(x=>new Member
+            {
+                MemberId = x.Id,
+                Name = x.Name,
+                Sex = (Sex) x.Sex,
+                Telephone = x.Telephone,
+                Address = x.Address
+            }).ToList();
+
+            return data;
         }
 
         public Member Get(int id)
