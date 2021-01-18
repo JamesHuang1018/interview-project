@@ -1,3 +1,4 @@
+using System;
 using System.Web.Http;
 using Demo.Domain.Entity;
 using Demo.DTO;
@@ -17,11 +18,19 @@ namespace Demo.Controllers
 
         public APIResult Get()
         {
-            return new APIResult()
+            try
             {
-                IsSuccess = true,
-                Payload = new MemberViewModel()
-            };
+                return new APIResult()
+                {
+                    IsSuccess = true,
+                    Payload = new MemberViewModel()
+                };
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public APIResult Get(int id)
@@ -43,8 +52,9 @@ namespace Demo.Controllers
                     }
                 };
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return new APIResult()
                 {
                     IsSuccess = false,
@@ -72,8 +82,9 @@ namespace Demo.Controllers
                     IsSuccess = result
                 };
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return new APIResult()
                 {
                     IsSuccess = false,
@@ -102,8 +113,9 @@ namespace Demo.Controllers
                     IsSuccess = result
                 };
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return new APIResult()
                 {
                     IsSuccess = false,
@@ -123,8 +135,9 @@ namespace Demo.Controllers
                     IsSuccess = result,
                 };
             }
-            catch
-            {
+            catch (Exception e)
+            { 
+                Console.WriteLine(e);
                 return new APIResult()
                 {
                     IsSuccess = false,

@@ -40,68 +40,47 @@ namespace Demo.DAL.Repository
 
         public bool Create(Member entity)
         {
-            try
-            {
-                _db.Add(new ORMMember
-                { 
-                    Name = entity.Name,
-                    Sex = (int) entity.Sex,
-                    Telephone = entity.Telephone,
-                    Address = entity.Address
-                });
+            _db.Add(new ORMMember
+            { 
+                Name = entity.Name,
+                Sex = (int) entity.Sex,
+                Telephone = entity.Telephone,
+                Address = entity.Address
+            });
 
-                _context.SaveChanges();
+            _context.SaveChanges();
 
-                return true;
-            }
-            catch 
-            {
-                return false;
-            }
+            return true;
         }
 
         public bool Update(int id, Member entity)
         {
-            try
-            {
-                var old = _db.Find(id);
+            var old = _db.Find(id);
 
-                if (old == null)
-                    return false;
- 
-                var entry = _context.Entry(old); 
-                
-                entry.CurrentValues.SetValues(entity);
-
-                _context.SaveChanges();
-
-                return true;
-            }
-            catch  
-            {
+            if (old == null)
                 return false;
-            }
+ 
+            var entry = _context.Entry(old); 
+                
+            entry.CurrentValues.SetValues(entity);
+
+            _context.SaveChanges();
+
+            return true;
         }
 
         public bool Delete(int id)
         {
-            try
-            {
-                var entity = _db.Find(id);
+            var entity = _db.Find(id);
 
-                if (entity == null)
-                    return false;
-
-                _db.Remove(entity);
-
-                _context.SaveChanges();
-
-                return true;
-            }
-            catch
-            {
+            if (entity == null)
                 return false;
-            }
+
+            _db.Remove(entity);
+
+            _context.SaveChanges();
+
+            return true;
         }
     }
 }
